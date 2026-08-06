@@ -781,6 +781,24 @@ a:focus-visible {
   color: var(--gray);
 }
 
+.project-dialog-markdown table {
+  width: 100%;
+  margin-top: 0.8rem;
+  border-collapse: collapse;
+}
+
+.project-dialog-markdown th,
+.project-dialog-markdown td {
+  padding: 0.65rem 0.8rem;
+  text-align: left;
+  border: 1px solid var(--gray);
+}
+
+.project-dialog-markdown th {
+  color: var(--black);
+  background: var(--gray-light);
+}
+
 @keyframes project-backdrop-in {
   from {
     opacity: 0;
