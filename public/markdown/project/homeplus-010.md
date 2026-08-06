@@ -21,7 +21,7 @@ CMS 관리자가 페이지를 편집하면서 컴포넌트의 내용, 스타일,
 
 ![실시간 프리뷰 데이터 반영](/images/project/preview-flow.png)
 
-_**CMS 레이아웃은 컴포넌트가 중첩된 트리 구조**_
+**CMS 레이아웃은 컴포넌트가 중첩된 트리 구조**
 
 ```javascript
 const layoutData = {
@@ -61,7 +61,7 @@ pageInfo → layout → children → comp-1 → children → comp-2
 
 💡 위 문제를 해결하기 위해 컴포넌트 ID와 레이아웃 내부 경로를 연결하는 layoutIdMap 생성
 
-_**`createIdMap()`은 전체 레이아웃(최상위부터 하위 컴포넌트까지)을 재귀적으로 순회하면서 컴포넌트 `id`와 데이터 경로를 `idMap`에 저장하는 함수**_
+**`createIdMap()`은 전체 레이아웃(최상위부터 하위 컴포넌트까지)을 재귀적으로 순회하면서 컴포넌트 `id`와 데이터 경로를 `idMap`에 저장하는 함수**
 
 ```javascript
 function createIdMap(
@@ -106,7 +106,7 @@ function createIdMap(
 }
 ```
 
-_**layoutIdMap 생성**_
+**layoutIdMap 생성**
 
 ```javascript
 const layoutIdMap = createIdMap(layoutData);
@@ -117,7 +117,7 @@ const layoutIdMap = {
 };
 ```
 
-_**선택한 컴포넌트 ID로 데이터 경로 조회**_
+**선택한 컴포넌트 ID로 데이터 경로 조회**
 
 ```javascript
 const selectedComponentId = 'comp-2'; // 컴포넌트 선택 ID
@@ -126,7 +126,7 @@ const componentPath = layoutIdMap[selectedComponentId]; // layoutIdMap에서 컴
 pageInfo.layout.children:comp-1.children:comp-2
 ```
 
-_**조회한 경로를 이용해 컴포넌트 속성 변경**_
+**조회한 경로를 이용해 컴포넌트 속성 변경**
 
 ```javascript
 const currentComponent = messageHandler.getComponentById(selectedComponentId);
@@ -141,10 +141,10 @@ messageHandler.handleAction({
 });
 ```
 
-_**변경된 레이아웃을 Redux에 반영**_
+**변경된 레이아웃을 Redux에 반영**
 
 ```javascript
 dispatch.cms.layoutReRender(messageHandler.currentLayoutData);
 ```
 
-_**👍 Redux의 pageLayoutInfo가 갱신 > 컴포넌트 재렌더링 > Preview 노출**_
+**👍 Redux의 pageLayoutInfo가 갱신 > 컴포넌트 재렌더링 > Preview 노출**
