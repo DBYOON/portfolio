@@ -209,7 +209,7 @@
       "company": "홈플러스",
       "name": "고객센터 시나리오형 챗봇 서비스 구축(작성 완료)",
       "description": "고객센터 시나리오형 챗봇 서비스를 도입하여 중장년층 사용자도 반복 문의를 더 쉽게 찾을 수 있도록 개선",
-      "period": ["2024.08", "2024.09"],
+      "period": ["2024.06", "2024.07"],
       "stack": ["React", "TypeScript", "Redux", "Emotion", "GIT"],
       "links": [{ "name": "Link to Website", "href": "https://mfront.homeplus.co.kr/" }]
     },
