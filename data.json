@@ -147,7 +147,7 @@
       "name": "DTO 기반 API 인터페이스 타입 재정의(작성 완료)",
       "description": "API 명세를 기준으로 any로 처리되던 Request/Response 구조를 DTO 기반 타입으로 재정의",
       "period": ["2023.07", "2023.07"],
-      "stack": ["React", "TypeScript", "Redux", "Emotion", "GIT"],
+      "stack": ["React", "TypeScript", "GIT"],
       "links": [{ "name": "Link to Website", "href": "https://mfront.homeplus.co.kr/" }]
     },
     {
