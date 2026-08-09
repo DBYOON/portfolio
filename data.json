@@ -121,7 +121,7 @@
     {
       "id": "afreecatv-005",
       "company": "아프리카TV",
-      "name": "VOD편집기 구축(작성중)",
+      "name": "VOD편집기 구축(작성 완료)",
       "description": "나의 다시보기 또는 BJ의 다시보기 중에 편집하고 싶은 구간을 업로드 VOD로 만들 수 있는 서비스",
       "period": ["2019.12", "2020.01"],
       "stack": ["HTML", "CSS/SCSS", "javaScript", "SVN"],
