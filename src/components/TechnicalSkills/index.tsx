@@ -1,11 +1,20 @@
-import SectionTitle from '../SectionTitle'
-import type { DataProps } from '../../types'
+import SectionTitle from '../SectionTitle';
+import ScrollRevealSection from '../ScrollRevealSection';
+import type { DataProps } from '../../types';
 
-function TechnicalSkills({ technicalSkills }: Pick<DataProps, 'technicalSkills'>) {
-  const skills = [...new Set(technicalSkills.flatMap((group) => group.skills))]
+interface TechnicalSkillsProps extends Pick<DataProps, 'technicalSkills'> {
+  revealWhen?: boolean;
+}
+
+function TechnicalSkills({ technicalSkills, revealWhen }: TechnicalSkillsProps) {
+  const skills = [...new Set(technicalSkills.flatMap((group) => group.skills))];
 
   return (
-    <section className="skills-section" aria-labelledby="skills-title">
+    <ScrollRevealSection
+      className="skills-section"
+      labelledBy="skills-title"
+      revealWhen={revealWhen}
+    >
       <SectionTitle id="skills-title">Skills</SectionTitle>
       <div className="skill-badges" aria-label="보유 기술">
         {skills.map((skill) => (
@@ -14,8 +23,8 @@ function TechnicalSkills({ technicalSkills }: Pick<DataProps, 'technicalSkills'>
           </span>
         ))}
       </div>
-    </section>
-  )
+    </ScrollRevealSection>
+  );
 }
 
-export default TechnicalSkills
+export default TechnicalSkills;
