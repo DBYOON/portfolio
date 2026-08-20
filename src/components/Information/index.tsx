@@ -1,3 +1,4 @@
+import type { AnimationEvent } from 'react';
 import ContactItem from '../ContactItem';
 import Markdown from '../Markdown';
 import PublicImage from '../PublicImage';
@@ -5,7 +6,7 @@ import type { DataProps } from '../../types';
 
 const INTRO_CHARACTER_DELAY = 45;
 const INTRO_CHARACTER_DURATION = 420;
-const INTRODUCTIONS_GAP = 120;
+const INTRODUCTIONS_GAP = 0;
 
 function renderAnimatedText(text: string, startIndex = 0) {
   return Array.from(text).map((character, index) => (
@@ -19,7 +20,11 @@ function renderAnimatedText(text: string, startIndex = 0) {
   ));
 }
 
-function Information({ information }: Pick<DataProps, 'information'>) {
+interface InformationProps extends Pick<DataProps, 'information'> {
+  onIntroductionsReveal?: () => void;
+}
+
+function Information({ information, onIntroductionsReveal }: InformationProps) {
   const visibleContacts = information.contact.filter(({ hidden }) => !hidden);
   const greeting = '안녕하세요.';
   const roleStartIndex = Array.from(greeting).length;
@@ -30,6 +35,12 @@ function Information({ information }: Pick<DataProps, 'information'>) {
     (totalCharacterCount - 1) * INTRO_CHARACTER_DELAY +
     INTRO_CHARACTER_DURATION +
     INTRODUCTIONS_GAP;
+
+  const handleIntroductionsAnimationEnd = (event: AnimationEvent<HTMLDivElement>) => {
+    if (event.target === event.currentTarget && event.animationName === 'introductions-reveal') {
+      onIntroductionsReveal?.();
+    }
+  };
 
   return (
     <section className="information" aria-labelledby="intro-title">
@@ -67,7 +78,11 @@ function Information({ information }: Pick<DataProps, 'information'>) {
         </div>
       </div>
 
-      <div className="introductions-reveal" style={{ animationDelay: `${introductionsDelay}ms` }}>
+      <div
+        className="introductions-reveal"
+        style={{ animationDelay: `${introductionsDelay}ms` }}
+        onAnimationEnd={handleIntroductionsAnimationEnd}
+      >
         <Markdown src="/markdown/information/introduce.md" className="introductions" />
       </div>
     </section>

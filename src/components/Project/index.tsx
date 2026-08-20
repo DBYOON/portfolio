@@ -1,6 +1,7 @@
 import { useId, useRef, useState, type KeyboardEvent } from 'react';
 import ProjectItem from './ProjectItem';
 import SectionTitle from '../SectionTitle';
+import ScrollRevealSection from '../ScrollRevealSection';
 import type { DataProps, ProjectCompany } from '../../types';
 
 const PROJECT_COMPANIES: ProjectCompany[] = ['홈플러스', '아프리카TV', '아이포유웍스'];
@@ -36,7 +37,7 @@ function Project({ project }: Pick<DataProps, 'project'>) {
   };
 
   return (
-    <section aria-labelledby="project-title">
+    <ScrollRevealSection labelledBy="project-title">
       <SectionTitle id="project-title">Project</SectionTitle>
 
       <div className="project-tabs" role="tablist" aria-label="회사별 프로젝트">
@@ -82,7 +83,7 @@ function Project({ project }: Pick<DataProps, 'project'>) {
           <p className="project-empty">등록된 프로젝트가 없습니다.</p>
         )}
       </div>
-    </section>
+    </ScrollRevealSection>
   );
 }
 
