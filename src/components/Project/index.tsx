@@ -4,7 +4,7 @@ import SectionTitle from '../SectionTitle';
 import ScrollRevealSection from '../ScrollRevealSection';
 import type { DataProps, ProjectCompany } from '../../types';
 
-const PROJECT_COMPANIES: ProjectCompany[] = ['홈플러스', '아프리카TV', '아이포유웍스'];
+const PROJECT_COMPANIES: ProjectCompany[] = ['홈플러스', '아프리카TV'];
 
 function Project({ project }: Pick<DataProps, 'project'>) {
   const [activeCompany, setActiveCompany] = useState<ProjectCompany>('홈플러스');
