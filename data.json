@@ -199,7 +199,7 @@
       "id": "homeplus-008",
       "company": "홈플러스",
       "name": "커밋 메시지 자동화",
-      "description": "Claude Code 또는 Codex에서 사용할 수 있는 커밋 메시지 자동화 서포트",
+      "description": "Claude Code 또는 Codex에서 사용할 수 있는 커밋 메시지 스킬 개발 참여",
       "period": ["2026.06", "2026.06"],
       "stack": ["React", "Claude Code", "GIT"]
     },

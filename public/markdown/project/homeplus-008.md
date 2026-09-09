@@ -1,10 +1,10 @@
 #### 개요
 
-**`/commit` — Claude Code / Codex 커밋 메시지 커맨드 가이드**
+**`/commit` — Claude Code / Codex 커밋 메시지 스킬 개발 참여**
 
 #### 핵심 요약
 
-`/commit`은 Claude Code 또는 Codex에서 사용할 수 있는 커밋 메시지 자동화 커맨드입니다.
+`/commit`은 Claude Code 또는 Codex에서 사용할 수 있는 커밋 메시지 자동화 스킬입니다.
 
 - 스테이징된 변경사항을 분석하여 프로젝트 컨벤션에 맞는 **한글 커밋 메시지 자동 제안**
 - 제안된 메시지를 대화형으로 검토 및 수정 가능
