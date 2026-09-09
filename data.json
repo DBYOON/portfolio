@@ -198,11 +198,10 @@
     {
       "id": "homeplus-008",
       "company": "홈플러스",
-      "name": "AI 활용(미작성)",
-      "description": "업무 진행 시 Claude code 활용",
-      "period": ["2026.02", "2026.06"],
-      "stack": ["React", "Claude Code", "GIT"],
-      "links": [{ "name": "Link to Website", "href": "https://mfront.homeplus.co.kr/" }]
+      "name": "커밋 메시지 자동화",
+      "description": "Claude Code 또는 Codex에서 사용할 수 있는 커밋 메시지 자동화 서포트",
+      "period": ["2026.06", "2026.06"],
+      "stack": ["React", "Claude Code", "GIT"]
     },
     {
       "id": "homeplus-009",
