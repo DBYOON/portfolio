@@ -24,7 +24,7 @@ export interface LinkProps {
   href: string;
 }
 
-export type ProjectCompany = '홈플러스' | '아프리카TV' | '아이포유웍스';
+export type ProjectCompany = '홈플러스' | '아프리카TV' | '아이포유웍스' | '개인 프로젝트';
 
 export interface WorkExperienceProps {
   id: number;
