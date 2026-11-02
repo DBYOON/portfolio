@@ -4,7 +4,7 @@ import SectionTitle from '../SectionTitle';
 import ScrollRevealSection from '../ScrollRevealSection';
 import type { DataProps, ProjectCompany } from '../../types';
 
-const PROJECT_COMPANIES: ProjectCompany[] = ['홈플러스', '아프리카TV'];
+const PROJECT_COMPANIES: ProjectCompany[] = ['홈플러스', '아프리카TV', '개인 프로젝트'];
 
 function Project({ project }: Pick<DataProps, 'project'>) {
   const [activeCompany, setActiveCompany] = useState<ProjectCompany>('홈플러스');
@@ -40,7 +40,7 @@ function Project({ project }: Pick<DataProps, 'project'>) {
     <ScrollRevealSection labelledBy="project-title">
       <SectionTitle id="project-title">Project</SectionTitle>
 
-      <div className="project-tabs" role="tablist" aria-label="회사별 프로젝트">
+      <div className="project-tabs" role="tablist" aria-label="프로젝트 분류">
         {PROJECT_COMPANIES.map((company, index) => {
           const isActive = company === activeCompany;
 

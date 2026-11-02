@@ -472,6 +472,12 @@ a:focus-visible {
   margin-left: auto;
 }
 
+.project-dialog-markdown img[src='/images/project/promotion-workflow.png'] {
+  width: 50%;
+  margin-right: auto;
+  margin-left: auto;
+}
+
 .markdown-video {
   display: block;
   width: 100%;
@@ -644,7 +650,7 @@ a:focus-visible {
 .project-dialog {
   position: relative;
   display: flex;
-  width: min(100%, 36rem);
+  width: min(100%, 50rem);
   height: min(46rem, calc(100dvh - 4rem));
   overflow: hidden;
   color: var(--black);
