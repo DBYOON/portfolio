@@ -896,6 +896,10 @@ a:focus-visible {
   padding-right: 1rem;
 }
 
+.simple-entry .entry-links a {
+  font-weight: 700;
+}
+
 .simple-entry > p {
   margin: 0;
   padding: 1rem 1.5rem;
