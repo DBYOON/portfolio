@@ -9,9 +9,9 @@
 #### 주요 작업
 
 - Cogbot Web SDK 연동 및 PC·모바일 반응형 팝업 구현
-- 앱스킴을 활용한 WebView ↔ Native 통신 구현
+- 앱스킴을 활용한 WebView -> Native 통신 구현
 
-**1. Cogbot Web SDK 연동 및 PC·모바일 반응형 팝업 구현**
+#### Cogbot Web SDK 연동 및 PC·모바일 반응형 팝업 구현
 
 **SDK 및 인증 토큰 연동**
 
@@ -19,10 +19,10 @@
 
 ```ts
 window.Cogbot.create(containerElement, {
-    url, // 챗봇 서비스 주소
-    botId, // 챗봇 ID
-    version, // 챗봇 버전
-    token, // AUTH_TOKEN 값
+  url, // 챗봇 서비스 주소
+  botId, // 챗봇 ID
+  version, // 챗봇 버전
+  token, // AUTH_TOKEN 값
 });
 ```
 
@@ -38,10 +38,10 @@ API Key와 인증 세부정보는 브라우저에 포함하지 않았습니다. 
 
 동일한 챗봇을 PC와 모바일 웹에서 사용할 수 있도록 반응형 팝업을 구현하였습니다.
 
-| 화면   | UI 형태                                             |
-| ------ | --------------------------------------------------- |
-| PC     | 우측 하단 `320 × 550px` 팝업 |
-| 모바일 | 전체 화면 챗봇, 상단 타이틀과 닫기 버튼 제공        |
+| 화면   | UI 형태                                      |
+| ------ | -------------------------------------------- |
+| PC     | 우측 하단 `320 × 550px` 팝업                 |
+| 모바일 | 전체 화면 챗봇, 상단 타이틀과 닫기 버튼 제공 |
 
 Cogbot이 생성하는 iframe이 컨테이너 전체 영역을 사용하도록 크기를 지정하고, 모바일에서는 페이지 스크롤과 독립적으로 챗봇을 사용할 수 있도록 고정 레이어로 구성하였습니다.
 
@@ -51,9 +51,9 @@ Cogbot이 생성하는 iframe이 컨테이너 전체 영역을 사용하도록 �
 
 ```ts
 const callNative = (scheme: string) => {
-    if (isApp) {
-        window.location.href = `toApp://${scheme}`;
-    }
+  if (isApp) {
+    window.location.href = `toApp://${scheme}`;
+  }
 };
 
 const openChatbot = () => callNative('chatbot');
