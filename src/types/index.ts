@@ -49,6 +49,7 @@ export interface ActivityProps {
   name: string;
   period: [string, string];
   description: string;
+  links?: LinkProps[];
 }
 
 export interface DataProps {
