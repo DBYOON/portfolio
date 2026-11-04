@@ -186,7 +186,7 @@
     {
       "id": "homeplus-007",
       "company": "홈플러스",
-      "name": "재입고 알림 구축(미작성)",
+      "name": "재입고 알림 구축",
       "description": "품절 상품의 재입고 발생 시 즉시 알림을 제공하는 기능 도입",
       "period": ["2025.11", "2025.12"],
       "stack": ["React", "TypeScript", "Redux", "React Query", "Emotion", "GIT"],
