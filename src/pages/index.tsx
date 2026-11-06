@@ -2,7 +2,7 @@ import { useState } from 'react';
 import data from '../../data.json';
 import Activity from '../components/Activity';
 import Footer from '../components/Footer';
-import Information from '../components/Information';
+import Information2 from '../components/Information2';
 import Layout from '../components/Layout';
 import Project from '../components/Project';
 import TechnicalSkills from '../components/TechnicalSkills';
@@ -17,11 +17,12 @@ function Home() {
 
   return (
     <>
+      <Information2
+        information={information}
+        workExperience={workExperience}
+        onIntroductionsReveal={() => setIsIntroductionRevealed(true)}
+      />
       <Layout>
-        <Information
-          information={information}
-          onIntroductionsReveal={() => setIsIntroductionRevealed(true)}
-        />
         <TechnicalSkills technicalSkills={technicalSkills} revealWhen={isIntroductionRevealed} />
         <WorkExperience workExperience={workExperience} />
         <Project project={project} />
