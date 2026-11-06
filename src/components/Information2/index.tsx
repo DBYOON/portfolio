@@ -109,7 +109,7 @@ function Information2({ information, workExperience, onIntroductionsReveal }: In
                 <dt>Name</dt>
                 <dd>{information.name}</dd>
                 <dt>Birth</dt>
-                <dd>1988.09.07</dd>
+                <dd>0000.00.00</dd>
                 <dt>Email</dt>
                 <dd>hello.duckboda@gmail.com</dd>
                 <dt>Phone</dt>
@@ -164,13 +164,6 @@ function Information2({ information, workExperience, onIntroductionsReveal }: In
                 <div>
                   <b>{information.name}</b>
                   <p>Frontend Developer</p>
-                </div>
-                <div>
-                  <small>
-                    Development Team
-                    <br />
-                    Frontend engineer.
-                  </small>
                 </div>
               </div>
             </div>
